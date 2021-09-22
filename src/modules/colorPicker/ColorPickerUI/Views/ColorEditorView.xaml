@@ -41,6 +41,12 @@
                                 <ui:FontIcon Glyph="&#xE107;" />
                             </MenuItem.Icon>
                         </MenuItem>
+                        <MenuItem Header="{x:Static p:Resources.Remove}"
+                                  Command="{Binding RemoveColorCommand}">
+                            <MenuItem.Icon>
+                                <ui:FontIcon Glyph="&#xE107;" />
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </ContextMenu>
                 </ui:ListView.ContextMenu>
                 <ui:ListView.ItemTemplate>
