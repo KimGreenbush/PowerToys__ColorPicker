@@ -21,5 +21,10 @@ namespace ColorPicker.Views
             // More appropriate event would be SelectionChanged but we can not distinguish between user action and program action inside of it.
             SessionEventHelper.Event.EditorHistoryColorPicked = true;
         }
+
+        private void RemoveAllColors(object sender, System.Windows.RoutedEventArgs e)
+        {
+            SessionEventHelper.Event.EditorHistoryColorPicked = false;
+        }
     }
 }
