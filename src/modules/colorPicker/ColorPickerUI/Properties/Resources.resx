@@ -211,7 +211,7 @@
   </data>
   <data name="TEXT_COLOR_DARKGRAY" xml:space="preserve">
     <value>Dark gray</value>
-    <comment>Dark gray color</comment>
+    <comment>Dark gray color to light pink</comment>
   </data>
   <data name="TEXT_COLOR_CORAL" xml:space="preserve">
     <value>Coral</value>
