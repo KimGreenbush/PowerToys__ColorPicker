@@ -22,9 +22,9 @@ namespace ColorPicker.Views
             SessionEventHelper.Event.EditorHistoryColorPicked = true;
         }
 
-        private void RemoveAllColors(object sender, System.Windows.RoutedEventArgs e)
+        private void RemoveAll_ItemClick(object sender, System.Windows.RoutedEventArgs e)
         {
-            SessionEventHelper.Event.EditorHistoryColorPicked = false;
+            SessionEventHelper.Event.EditorHistoryColorRemoved = false;
         }
     }
 }

@@ -4,6 +4,7 @@
 
 using System;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows;
@@ -131,6 +132,9 @@ namespace ColorPicker.ViewModels
             ClipboardHelper.CopyToClipboard(ColorText);
 
             var color = GetColorString();
+
+            Debug.WriteLine("DEBUG Line - attached process");
+            Debug.WriteLine(color);
 
             var oldIndex = _userSettings.ColorHistory.IndexOf(color);
             if (oldIndex != -1)

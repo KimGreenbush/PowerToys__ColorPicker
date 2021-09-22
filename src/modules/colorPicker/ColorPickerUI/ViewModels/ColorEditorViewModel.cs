@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
@@ -100,6 +101,9 @@ namespace ColorPicker.ViewModels
             _initializing = true;
 
             ColorsHistory.Clear();
+
+            Debug.WriteLine("DEBUG Line - attached process");
+            Debug.WriteLine(ColorsHistory);
 
             foreach (var item in _userSettings.ColorHistory)
             {
