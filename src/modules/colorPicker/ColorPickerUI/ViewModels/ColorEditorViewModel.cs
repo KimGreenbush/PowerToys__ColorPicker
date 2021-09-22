@@ -146,7 +146,7 @@ namespace ColorPicker.ViewModels
 
         private void DeleteAllColors()
         {
-            // delete all colors from the color history
+            // delete all colors from color history
             ColorsHistory.Clear();
             SessionEventHelper.Event.EditorHistoryColorRemoved = true;
         }
