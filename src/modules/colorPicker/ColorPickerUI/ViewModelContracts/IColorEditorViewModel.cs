@@ -18,6 +18,8 @@ namespace ColorPicker.ViewModelContracts
 
         ICommand RemoveColorCommand { get; }
 
+        ICommand RemoveAllColorsCommand { get; }
+
         ObservableCollection<ColorFormatModel> ColorRepresentations { get; }
 
         ObservableCollection<Color> ColorsHistory { get; }

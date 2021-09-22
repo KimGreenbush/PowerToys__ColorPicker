@@ -41,8 +41,7 @@
                                 <ui:FontIcon Glyph="&#xE107;" />
                             </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem Header="{x:Static p:Resources.Remove}"
-                                  Command="{Binding RemoveColorCommand}">
+                        <MenuItem Header="RemoveAll" Command="{Binding RemoveAllColorsCommand}">
                             <MenuItem.Icon>
                                 <ui:FontIcon Glyph="&#xE107;" />
                             </MenuItem.Icon>

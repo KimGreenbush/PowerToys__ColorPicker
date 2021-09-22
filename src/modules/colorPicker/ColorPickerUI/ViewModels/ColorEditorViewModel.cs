@@ -33,6 +33,7 @@ namespace ColorPicker.ViewModels
         {
             OpenColorPickerCommand = new RelayCommand(() => OpenColorPickerRequested?.Invoke(this, EventArgs.Empty));
             RemoveColorCommand = new RelayCommand(DeleteSelectedColor);
+            RemoveAllColorsCommand = new RelayCommand(DeleteAllColors);
 
             SelectedColorChangedCommand = new RelayCommand((newColor) =>
             {
@@ -50,6 +51,8 @@ namespace ColorPicker.ViewModels
         public ICommand OpenColorPickerCommand { get; }
 
         public ICommand RemoveColorCommand { get; }
+
+        public ICommand RemoveAllColorsCommand { get; }
 
         public ICommand SelectedColorChangedCommand { get; }
 
@@ -129,6 +132,15 @@ namespace ColorPicker.ViewModels
         }
 
         private void DeleteSelectedColor()
+        {
+            // select new color on the same index if possible, otherwise the last one
+            var indexToSelect = SelectedColorIndex == ColorsHistory.Count - 1 ? ColorsHistory.Count - 2 : SelectedColorIndex;
+            ColorsHistory.RemoveAt(SelectedColorIndex);
+            SelectedColorIndex = indexToSelect;
+            SessionEventHelper.Event.EditorHistoryColorRemoved = true;
+        }
+
+        private void DeleteAllColors()
         {
             // select new color on the same index if possible, otherwise the last one
             var indexToSelect = SelectedColorIndex == ColorsHistory.Count - 1 ? ColorsHistory.Count - 2 : SelectedColorIndex;
