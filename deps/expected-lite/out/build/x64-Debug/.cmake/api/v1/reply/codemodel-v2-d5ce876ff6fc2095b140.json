@@ -1,0 +1,113 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "expected_lite"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "test",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "expected-lite-cpp11.t::@36f028580bb02cc8272a",
+					"jsonFile" : "target-expected-lite-cpp11.t-Debug-fb229a45d4fa7b78592f.json",
+					"name" : "expected-lite-cpp11.t",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "expected-lite-cpp14.t::@36f028580bb02cc8272a",
+					"jsonFile" : "target-expected-lite-cpp14.t-Debug-0085e160cb65fb91a929.json",
+					"name" : "expected-lite-cpp14.t",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "expected-lite-cpp17.t::@36f028580bb02cc8272a",
+					"jsonFile" : "target-expected-lite-cpp17.t-Debug-04222f26d3da87e69cfb.json",
+					"name" : "expected-lite-cpp17.t",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "expected-lite-cpplatest.t::@36f028580bb02cc8272a",
+					"jsonFile" : "target-expected-lite-cpplatest.t-Debug-0ce1655683ca589087e3.json",
+					"name" : "expected-lite-cpplatest.t",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug",
+		"source" : "C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

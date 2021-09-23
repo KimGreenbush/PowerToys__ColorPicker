@@ -146,11 +146,12 @@ namespace ColorPicker.ViewModels
 
         private void DeleteAllColors()
         {
-            // select new color on the same index if possible, otherwise the last one
-            var indexToSelect = SelectedColorIndex == ColorsHistory.Count - 1 ? ColorsHistory.Count - 2 : SelectedColorIndex;
-            ColorsHistory.RemoveAt(SelectedColorIndex);
-            SelectedColorIndex = indexToSelect;
-            SessionEventHelper.Event.EditorHistoryColorRemoved = true;
+            // delete all colors from color history
+            if (!ColorsHistory.Equals(null))
+            {
+                ColorsHistory.Clear();
+                SessionEventHelper.Event.EditorHistoryColorRemoved = true;
+            }
         }
 
         private void SetupAllColorRepresentations()

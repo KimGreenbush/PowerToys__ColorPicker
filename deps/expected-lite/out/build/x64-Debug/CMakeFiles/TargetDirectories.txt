@@ -1,0 +1,16 @@
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/CMakeFiles/install/local.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/CMakeFiles/install.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/CMakeFiles/test.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/CMakeFiles/list_install_components.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/edit_cache.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/expected-lite-cpp11.t.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/expected-lite-cpp14.t.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/expected-lite-cpp17.t.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/rebuild_cache.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/test.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/expected-lite-cpplatest.t.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/list_install_components.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/install/local.dir
+C:/Users/v-olaborde/source/repos/PowerToys/deps/expected-lite/out/build/x64-Debug/test/CMakeFiles/install.dir
