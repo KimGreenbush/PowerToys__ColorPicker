@@ -33,9 +33,19 @@
                          ItemContainerStyle="{DynamicResource ColorHistoryListViewStyle}"
                          IsItemClickEnabled="True"
                          ItemClick="HistoryColors_ItemClick">
-                <ui:ListView.ContextMenu>
+                 <ui:ListView.ContextMenu>
                     <ContextMenu Visibility="{Binding ColorsHistory.Count, Converter={StaticResource numberToVisibilityConverter}}">
-                        <MenuItem Header="{x:Static p:Resources.Remove}"
+                        <TextBlock 
+                                   x:Name="ColorTextBlock"
+                                   Margin="8,5,8,8"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"
+                                   Foreground="{DynamicResource PrimaryForegroundBrush}"
+                                   Grid.Column="1"
+                                    AutomationProperties.LabeledBy="{Binding ColorName}" 
+                                    AutomationProperties.Name="{Binding ColorName}"
+                                    Text="{Binding ColorText}" />
+                            <MenuItem Header="{x:Static p:Resources.Remove}"
                                   Command="{Binding RemoveColorCommand}">
                             <MenuItem.Icon>
                                 <ui:FontIcon Glyph="&#xE107;" />
