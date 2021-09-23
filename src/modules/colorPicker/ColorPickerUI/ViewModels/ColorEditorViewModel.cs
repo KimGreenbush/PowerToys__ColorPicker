@@ -17,6 +17,7 @@ using ColorPicker.Models;
 using ColorPicker.Settings;
 using ColorPicker.ViewModelContracts;
 using Microsoft.PowerToys.Settings.UI.Library.Enumerations;
+using Newtonsoft.Json;
 
 namespace ColorPicker.ViewModels
 {
@@ -35,6 +36,7 @@ namespace ColorPicker.ViewModels
             OpenColorPickerCommand = new RelayCommand(() => OpenColorPickerRequested?.Invoke(this, EventArgs.Empty));
             RemoveColorCommand = new RelayCommand(DeleteSelectedColor);
             RemoveAllColorsCommand = new RelayCommand(DeleteAllColors);
+            ExportColorsCommand = new RelayCommand(ExportAllColors);
 
             SelectedColorChangedCommand = new RelayCommand((newColor) =>
             {
@@ -54,6 +56,8 @@ namespace ColorPicker.ViewModels
         public ICommand RemoveColorCommand { get; }
 
         public ICommand RemoveAllColorsCommand { get; }
+
+        public ICommand ExportColorsCommand { get; }
 
         public ICommand SelectedColorChangedCommand { get; }
 
@@ -152,6 +156,20 @@ namespace ColorPicker.ViewModels
                 ColorsHistory.Clear();
                 SessionEventHelper.Event.EditorHistoryColorRemoved = true;
             }
+        }
+
+        private void ExportAllColors()
+        {
+            string json_color = JsonConvert.SerializeObject(ColorsHistory);
+            Debug.WriteLine(json_color);
+
+            // Export all colors from color history
+            var savePicker = new Windows.Storage.Pickers.FileSavePicker();
+            savePicker.SuggestedStartLocation =
+            Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+
+            // Dropdown of file types the user can save the file as
+            savePicker.FileTypeChoices.Add("JSON file", new List<string>() { ".json" });
         }
 
         private void SetupAllColorRepresentations()
