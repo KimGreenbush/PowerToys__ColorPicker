@@ -388,4 +388,8 @@
   <data name="Lightest color" xml:space="preserve">
     <value>Color light 2</value>
   </data>
+  <data name="Remove_All" xml:space="preserve">
+    <value>Remove All</value>
+    <comment>Tooltip that shows that the user can remove all items from a list</comment>
+  </data>
 </root>
