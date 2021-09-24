@@ -31,5 +31,12 @@ namespace ColorPicker.ViewModelContracts
         int SelectedColorIndex { get; set; }
 
         void Initialize();
+
+        string ColorName { get; }
+
+        /// <summary>
+        /// Gets a value indicating whether gets the show color name
+        /// </summary>
+        bool ShowColorName { get; }
     }
 }
