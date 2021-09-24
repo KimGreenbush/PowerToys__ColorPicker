@@ -250,6 +250,15 @@ namespace ColorPicker.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove All.
+        /// </summary>
+        public static string Remove_All {
+            get {
+                return ResourceManager.GetString("Remove_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Saturation slider.
         /// </summary>
         public static string Saturation_slider {

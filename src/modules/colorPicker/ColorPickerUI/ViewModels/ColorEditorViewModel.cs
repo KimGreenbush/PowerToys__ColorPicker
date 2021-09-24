@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -17,6 +18,7 @@ using ColorPicker.Models;
 using ColorPicker.Settings;
 using ColorPicker.ViewModelContracts;
 using Microsoft.PowerToys.Settings.UI.Library.Enumerations;
+using Newtonsoft.Json;
 
 namespace ColorPicker.ViewModels
 {
@@ -35,6 +37,7 @@ namespace ColorPicker.ViewModels
             OpenColorPickerCommand = new RelayCommand(() => OpenColorPickerRequested?.Invoke(this, EventArgs.Empty));
             RemoveColorCommand = new RelayCommand(DeleteSelectedColor);
             RemoveAllColorsCommand = new RelayCommand(DeleteAllColors);
+            ExportColorsCommand = new RelayCommand(ExportAllColors);
 
             SelectedColorChangedCommand = new RelayCommand((newColor) =>
             {
@@ -54,6 +57,8 @@ namespace ColorPicker.ViewModels
         public ICommand RemoveColorCommand { get; }
 
         public ICommand RemoveAllColorsCommand { get; }
+
+        public ICommand ExportColorsCommand { get; }
 
         public ICommand SelectedColorChangedCommand { get; }
 
@@ -152,6 +157,15 @@ namespace ColorPicker.ViewModels
                 ColorsHistory.Clear();
                 SessionEventHelper.Event.EditorHistoryColorRemoved = true;
             }
+        }
+
+        private void ExportAllColors()
+        {
+            Dictionary<string, ObservableCollection<Color>> colors = new Dictionary<string, ObservableCollection<Color>>();
+            colors.Add("Colors", ColorsHistory);
+
+            // serialize JSON to a string and then write string to a file
+            File.WriteAllText(@"c:\colors.json", JsonConvert.SerializeObject(colors, Formatting.Indented));
         }
 
         private void SetupAllColorRepresentations()
