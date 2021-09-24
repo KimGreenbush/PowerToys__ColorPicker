@@ -22,6 +22,12 @@ namespace Microsoft.PowerToys.Settings.UI.Library
         [JsonPropertyName("awake_mode")]
         public AwakeMode Mode { get; set; }
 
+        [JsonPropertyName("awake_months")]
+        public uint Months { get; set; }
+
+        [JsonPropertyName("awake_days")]
+        public uint Days { get; set; }
+
         [JsonPropertyName("awake_hours")]
         public uint Hours { get; set; }
 
