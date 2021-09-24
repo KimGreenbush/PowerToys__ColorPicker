@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -160,16 +161,11 @@ namespace ColorPicker.ViewModels
 
         private void ExportAllColors()
         {
-            string json_color = JsonConvert.SerializeObject(ColorsHistory);
-            Debug.WriteLine(json_color);
+            Dictionary<string, ObservableCollection<Color>> colors = new Dictionary<string, ObservableCollection<Color>>();
+            colors.Add("Colors", ColorsHistory);
 
-            // Export all colors from color history
-            var savePicker = new Windows.Storage.Pickers.FileSavePicker();
-            savePicker.SuggestedStartLocation =
-            Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
-
-            // Dropdown of file types the user can save the file as
-            savePicker.FileTypeChoices.Add("JSON file", new List<string>() { ".json" });
+            // serialize JSON to a string and then write string to a file
+            File.WriteAllText(@"c:\colors.json", JsonConvert.SerializeObject(colors, Formatting.Indented));
         }
 
         private void SetupAllColorRepresentations()
