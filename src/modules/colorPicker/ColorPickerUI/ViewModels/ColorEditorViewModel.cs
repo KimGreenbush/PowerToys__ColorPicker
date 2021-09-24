@@ -31,6 +31,11 @@ namespace ColorPicker.ViewModels
         private bool _initializing;
         private int _selectedColorIndex;
 
+        /// <summary>
+        /// Backing field for <see cref="ColorName"/>
+        /// </summary>
+        private string _colorName;
+
         [ImportingConstructor]
         public ColorEditorViewModel(IUserSettings userSettings)
         {
@@ -99,6 +104,24 @@ namespace ColorPicker.ViewModels
 
                 OnPropertyChanged();
             }
+        }
+
+        /// <summary>
+        /// Gets the text representation of the selected color value
+        /// </summary>
+        public string ColorName
+        {
+            get => _colorName;
+            private set
+            {
+                _colorName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool ShowColorName
+        {
+            get => _userSettings.ShowColorName.Value;
         }
 
         public void Initialize()
