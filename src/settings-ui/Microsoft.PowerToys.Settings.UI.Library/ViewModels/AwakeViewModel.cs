@@ -103,6 +103,38 @@ namespace Microsoft.PowerToys.Settings.UI.Library.ViewModels
             }
         }
 
+        public uint Months
+        {
+            get => _months;
+            set
+            {
+                if (_months != value)
+                {
+                    _months = value;
+                    OnPropertyChanged(nameof(Months));
+
+                    Settings.Properties.Months = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public uint Days
+        {
+            get => _days;
+            set
+            {
+                if (_days != value)
+                {
+                    _days = value;
+                    OnPropertyChanged(nameof(Days));
+
+                    Settings.Properties.Days = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public uint Hours
         {
             get => _hours;
@@ -149,6 +181,8 @@ namespace Microsoft.PowerToys.Settings.UI.Library.ViewModels
         }
 
         private bool _isEnabled;
+        private uint _months;
+        private uint _days;
         private uint _hours;
         private uint _minutes;
         private bool _keepDisplayOn;
