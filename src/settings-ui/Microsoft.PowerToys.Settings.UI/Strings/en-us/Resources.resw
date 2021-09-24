@@ -1407,6 +1407,12 @@ From there, simply click on a Markdown file, PDF file or SVG icon in the File Ex
   <data name="Awake_Behavior_GroupSettings.Header" xml:space="preserve">
     <value>Behavior</value>
   </data>
+  <data name="Awake_TemporaryKeepAwake_Months.Header" xml:space="preserve">
+    <value>Months</value>  
+  </data>
+	<data name="Awake_TemporaryKeepAwake_Days.Header" xml:space="preserve">
+    <value>Days</value>
+  </data>
   <data name="Awake_TemporaryKeepAwake_Hours.Header" xml:space="preserve">
     <value>Hours</value>
   </data>

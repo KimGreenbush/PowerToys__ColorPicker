@@ -292,7 +292,7 @@ namespace Awake
 
                         case AwakeMode.TIMED:
                             {
-                                uint computedTime = (settings.Properties.Hours * 60 * 60) + (settings.Properties.Minutes * 60);
+                                uint computedTime = (settings.Properties.Months * 30 * 24 * 60 * 60) + (settings.Properties.Days * 24 * 60 * 60) + (settings.Properties.Hours * 60 * 60) + (settings.Properties.Minutes * 60);
                                 SetupTimedKeepAwake(computedTime, settings.Properties.KeepDisplayOn);
 
                                 break;

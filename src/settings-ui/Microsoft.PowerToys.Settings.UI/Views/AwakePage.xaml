@@ -85,6 +85,24 @@
 
                                     <StackPanel Margin="28,8,0,0"
                                                 Orientation="Horizontal">
+                                        <muxc:NumberBox x:Uid="Awake_TemporaryKeepAwake_Months"
+                                                        Value="{x:Bind ViewModel.Months, Mode=TwoWay}"
+                                                        IsEnabled="{x:Bind ViewModel.IsTimeConfigurationEnabled, Mode=OneWay}"
+                                                        Minimum="0"
+                                                        SpinButtonPlacementMode="Compact"
+                                                        HorizontalAlignment="Left"
+                                                        MinWidth="90"
+                                                        SmallChange="1" 
+                                                        LargeChange="5"/>
+                                        <muxc:NumberBox x:Uid="Awake_TemporaryKeepAwake_Days"
+                                                        Value="{x:Bind ViewModel.Days, Mode=TwoWay}"
+                                                        IsEnabled="{x:Bind ViewModel.IsTimeConfigurationEnabled, Mode=OneWay}"
+                                                        Minimum="0"
+                                                        SpinButtonPlacementMode="Compact"
+                                                        HorizontalAlignment="Left"
+                                                        MinWidth="90"
+                                                        SmallChange="1" 
+                                                        LargeChange="5"/>
                                         <muxc:NumberBox x:Uid="Awake_TemporaryKeepAwake_Hours"
                                                         Value="{x:Bind ViewModel.Hours, Mode=TwoWay}"
                                                         IsEnabled="{x:Bind ViewModel.IsTimeConfigurationEnabled, Mode=OneWay}"
